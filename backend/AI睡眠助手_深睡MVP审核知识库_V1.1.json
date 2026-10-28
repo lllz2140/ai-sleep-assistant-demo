@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "knowledge_base_version": "1.1",
+  "updated_at": "2026-10-27",
+  "scope": "Apple Watch深度睡眠指标卡与推荐追问MVP",
+  "usage_policy": {
+    "retrieval_mode": "fixed_mapping",
+    "max_entries_per_answer": 3,
+    "rules": [
+      "规则层负责个人基线、偏离程度和近期重复情况的计算，知识库不得重新计算或否定规则层结果",
+      "每次只传入与当前问题直接相关的知识条目",
+      "content是回答素材而非逐字复述模板",
+      "boundary用于限制过度解释，不要求在每次回答中机械复述"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "S01",
+      "type": "official_technical_report",
+      "citation": "Apple. Estimating Sleep Stages from Apple Watch. 2025.",
+      "url": "https://www.apple.com/health/pdf/Estimating_Sleep_Stages_from_Apple_Watch_Oct_2025.pdf"
+    },
+    {
+      "source_id": "S02",
+      "type": "professional_society_position_statement",
+      "citation": "Khosla S, et al. Consumer Sleep Technology: An American Academy of Sleep Medicine Position Statement. J Clin Sleep Med. 2018;14(5):877-880.",
+      "doi": "10.5664/jcsm.7120",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29734997/"
+    },
+    {
+      "source_id": "S03",
+      "type": "validation_study",
+      "citation": "Robbins R, et al. Accuracy of Three Commercial Wearable Devices for Sleep Tracking in Healthy Adults. Sensors. 2024;24(20):6532.",
+      "doi": "10.3390/s24206532",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39460013/"
+    },
+    {
+      "source_id": "S04",
+      "type": "expert_consensus",
+      "citation": "Ohayon M, et al. National Sleep Foundation's Sleep Quality Recommendations: First Report. Sleep Health. 2017;3(1):6-19.",
+      "doi": "10.1016/j.sleh.2016.11.006",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28346153/"
+    },
+    {
+      "source_id": "S05",
+      "type": "government_health_reference",
+      "citation": "National Heart, Lung, and Blood Institute. How Sleep Works: Sleep Phases and Stages. 2022.",
+      "url": "https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep"
+    }
+  ],
+  "knowledge_entries": [
+    {
+      "knowledge_id": "K-WEARABLE-ESTIMATE-01",
+      "topic": "睡眠分期估算",
+      "content": "Apple Watch对清醒、核心睡眠、深睡和REM的记录是基于传感器信号与算法得到的估算结果，可用于辅助观察记录和趋势，但不能等同于多导睡眠监测的脑电分期结果。",
+      "boundary": [
+        "不得将设备分钟数描述为精确生理真值",
+        "不得用于诊断睡眠疾病",
+        "页面已有固定提醒且问题与准确性无关时不主动复述"
+      ],
+      "source_refs": ["S01", "S02", "S03"]
+    },
+    {
+      "knowledge_id": "K-DS-AMOUNT-01",
+      "topic": "深睡数量",
+      "content": "深睡时长和占比会随年龄、个体及不同夜晚而变化。现有资料不支持把某一个固定比例作为所有成年人的个人最优目标，也不能将深睡简单理解为越多越好。",
+      "boundary": [
+        "一般人群比例只能作为背景参考",
+        "不得用固定百分比给单晚结果标记优秀、不足或不达标",
+        "不得声称主动增加深睡一定会改善健康"
+      ],
+      "source_refs": ["S04", "S05"]
+    },
+    {
+      "knowledge_id": "K-DS-NIGHT-01",
+      "topic": "单晚变化",
+      "content": "单晚睡眠阶段记录同时包含自然夜间波动和设备估算误差。一晚深睡偏高或偏低，首先说明该晚记录与比较基准存在差异；是否构成近期稳定变化，需要结合后续多晚记录判断。",
+      "boundary": [
+        "不得由单晚深睡结果直接判断整体睡眠质量改变",
+        "不得推断身体恢复不足或存在疾病"
+      ],
+      "source_refs": ["S01", "S03", "S04"]
+    },
+    {
+      "knowledge_id": "K-DS-TREND-01",
+      "topic": "重复变化",
+      "content": "在相同设备和相近记录条件下，多晚重复出现同方向变化，比单晚结果更能提示近期记录模式发生变化。它仍然是设备所记录的趋势，不等同于对整体睡眠质量或疾病的判定。",
+      "boundary": [
+        "不得把多次出现写成持续恶化",
+        "不得把非连续夜晚写成连续多晚",
+        "不得据此推断具体原因"
+      ],
+      "source_refs": ["S01", "S02", "S03", "S04"]
+    },
+    {
+      "knowledge_id": "K-SLEEP-QUALITY-01",
+      "topic": "整体睡眠质量",
+      "content": "深睡是整体睡眠结构的一部分。理解整体睡眠质量还应结合总睡眠时间、睡眠连续性以及用户醒后的恢复感和日间状态；现有共识并不支持用某个睡眠阶段的单一占比定义整体睡眠质量。",
+      "boundary": [
+        "只在问题直接询问整体睡眠质量时展开",
+        "不得作为所有回答的统一结尾"
+      ],
+      "source_refs": ["S04"]
+    },
+    {
+      "knowledge_id": "K-DS-TIMING-01",
+      "topic": "睡眠阶段时序",
+      "content": "深睡通常在一晚睡眠的早期阶段较多，REM通常在后期增加。这里的早期和后期是相对于个人实际睡眠过程而言，不是固定绑定在24:00至02:00等钟表时间。",
+      "boundary": [
+        "不得使用错过深睡黄金窗口解释单晚结果",
+        "不得仅凭阶段图判断睡眠周期完整或不完整"
+      ],
+      "source_refs": ["S05"]
+    },
+    {
+      "knowledge_id": "K-CROSS-DEVICE-01",
+      "topic": "跨设备比较",
+      "content": "不同品牌或型号的设备可能使用不同传感器、算法和阶段定义。不同设备给出的深睡或REM时长与占比，不宜作为同一尺度直接比较。",
+      "boundary": [
+        "个人基线应优先使用同一设备和相近佩戴条件下的记录",
+        "更换设备后应重新建立基线"
+      ],
+      "source_refs": ["S01", "S03"]
+    },
+    {
+      "knowledge_id": "K-NO-CAUSE-01",
+      "topic": "原因与日间后果",
+      "content": "睡眠阶段图可以描述设备记录到的分布，但单凭图形不能确定某次变化由压力、饮酒、咖啡、运动、晚睡或疾病造成，也不能推断用户第二天必然疲惫、注意力下降或情绪异常。",
+      "boundary": [
+        "只有用户主动提供相关行为或主观反馈时才能作为可能的关联线索",
+        "关联线索必须使用不确定性表达，不得写成确定因果"
+      ],
+      "source_refs": ["S02", "S04"]
+    }
+  ],
+  "question_mapping": {
+    "DS01": {
+      "required": ["K-DS-AMOUNT-01", "K-SLEEP-QUALITY-01"],
+      "optional": [],
+      "answer_focus": "不设越多越好的目标，并说明整体睡眠不能由单一阶段定义"
+    },
+    "DS21": {
+      "required": ["K-DS-NIGHT-01", "K-SLEEP-QUALITY-01"],
+      "optional": [],
+      "answer_focus": "解释单晚波动与估算误差，并补充整体睡眠判断维度"
+    },
+    "DS15": {
+      "required": ["K-DS-TREND-01", "K-SLEEP-QUALITY-01"],
+      "optional": [],
+      "answer_focus": "重复变化值得关注但不等于整体睡眠质量结论，并说明还需结合哪些维度"
+    }
+  }
+}

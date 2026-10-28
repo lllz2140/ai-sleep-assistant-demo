@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "pipeline": {
+    "version": "SLEEP-END-TO-END-V1.1",
+    "mode": "aliyun",
+    "rule_version": "SLEEP-CONTROL-V2.2",
+    "selector_version": "QUESTION-SELECTOR-V1.0",
+    "knowledge_mode": "fixed_mapping_reviewed_knowledge"
+  },
+  "metric_card": {
+    "sleep_date": "2026-10-08",
+    "metric_id": "deep_sleep",
+    "current_value": {
+      "minutes": 45,
+      "ratio": 0.1071
+    },
+    "personal_baseline": {
+      "available": true,
+      "duration_median": 74.5,
+      "duration_q1": 73.8,
+      "duration_q3": 76.0,
+      "ratio_median": 0.1773,
+      "ratio_q1": 0.1722,
+      "ratio_q3": 0.1795,
+      "valid_nights": 8,
+      "window_days": 14
+    },
+    "range_position": {
+      "duration": "below_typical_range",
+      "ratio": "below_typical_range"
+    },
+    "personalized_interpretation": {
+      "text": "本次深睡时长与占比均低于您的个人近期典型区间，较个人基线有明显下降。这在近期观察中属于偶发波动，尚未形成持续趋势。",
+      "evidence_refs": [
+        "grounding_facts.range_position",
+        "grounding_facts.change",
+        "grounding_facts.persistence"
+      ]
+    },
+    "recommended_question": {
+      "question_id": "DS21",
+      "intent": "understand_single_night_implication",
+      "text": "单晚深睡偏低，为什么不一定意味着这一晚的睡眠质量变差了？",
+      "context_source": "data_only"
+    },
+    "fixed_page_messages": [
+      "可穿戴设备的睡眠分期属于算法估算"
+    ]
+  },
+  "question_answer": {
+    "question_id": "DS21",
+    "text": "单晚深睡偏低不一定意味着这一晚的整体睡眠质量变差。因为单晚的睡眠阶段记录同时包含自然的夜间波动与设备估算误差，且您这次的偏低属于偶发波动，尚未形成稳定趋势，不能仅凭单晚结果直接判断睡眠质量下降。评估整体睡眠还需要结合总睡眠时间、睡眠连续性以及醒后的恢复感和日间状态来综合看待。",
+    "evidence_refs": [
+      "grounding_facts.range_position",
+      "grounding_facts.persistence"
+    ],
+    "knowledge_refs": [
+      "K-DS-NIGHT-01",
+      "K-SLEEP-QUALITY-01"
+    ]
+  }
+}

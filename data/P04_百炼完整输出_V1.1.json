@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "pipeline": {
+    "version": "SLEEP-END-TO-END-V1.1",
+    "mode": "aliyun",
+    "rule_version": "SLEEP-CONTROL-V2.2",
+    "selector_version": "QUESTION-SELECTOR-V1.0",
+    "knowledge_mode": "fixed_mapping_reviewed_knowledge"
+  },
+  "metric_card": {
+    "sleep_date": "2026-10-08",
+    "metric_id": "deep_sleep",
+    "current_value": {
+      "minutes": 45,
+      "ratio": 0.1071
+    },
+    "personal_baseline": {
+      "available": true,
+      "duration_median": 74.5,
+      "duration_q1": 67.2,
+      "duration_q3": 76.2,
+      "ratio_median": 0.1756,
+      "ratio_q1": 0.1576,
+      "ratio_q3": 0.1808,
+      "valid_nights": 8,
+      "window_days": 14
+    },
+    "range_position": {
+      "duration": "below_typical_range",
+      "ratio": "below_typical_range"
+    },
+    "personalized_interpretation": {
+      "text": "您的深睡时长与占比均低于个人近期典型区间，且在近4晚中有3晚呈现此偏低状态。",
+      "evidence_refs": [
+        "grounding_facts.range_position",
+        "grounding_facts.persistence"
+      ]
+    },
+    "recommended_question": {
+      "question_id": "DS15",
+      "intent": "understand_repeated_change_implication",
+      "text": "深睡近期多次低于个人水平，就说明睡眠质量变差了吗？",
+      "context_source": "data_only"
+    },
+    "fixed_page_messages": [
+      "可穿戴设备的睡眠分期属于算法估算"
+    ]
+  },
+  "question_answer": {
+    "question_id": "DS15",
+    "text": "不能仅凭深睡近期多次偏低就断定整体睡眠质量变差。近4晚中有3晚低于个人典型区间，这种重复变化比单晚结果更能提示近期的记录模式发生了变化，但它仍只是设备记录的趋势。要判断整体睡眠质量，还需要结合总睡眠时间、睡眠连续性，以及醒后的恢复感和白天的精神状态来综合评估。",
+    "evidence_refs": [
+      "grounding_facts.range_position",
+      "grounding_facts.persistence"
+    ],
+    "knowledge_refs": [
+      "K-DS-TREND-01",
+      "K-SLEEP-QUALITY-01"
+    ]
+  }
+}

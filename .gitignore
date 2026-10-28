@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local secrets
+.env
+.streamlit/secrets.toml
+
+# System and editors
+.DS_Store
+.idea/
+.vscode/
+
+# Local outputs
+*_本地输出.json
+*.log

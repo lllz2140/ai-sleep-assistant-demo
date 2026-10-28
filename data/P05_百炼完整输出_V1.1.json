@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "pipeline": {
+    "version": "SLEEP-END-TO-END-V1.1",
+    "mode": "aliyun",
+    "rule_version": "SLEEP-CONTROL-V2.2",
+    "selector_version": "QUESTION-SELECTOR-V1.0",
+    "knowledge_mode": "fixed_mapping_reviewed_knowledge"
+  },
+  "metric_card": {
+    "sleep_date": "2026-10-08",
+    "metric_id": "deep_sleep",
+    "current_value": {
+      "minutes": 55,
+      "ratio": 0.1774
+    },
+    "personal_baseline": {
+      "available": true,
+      "duration_median": 74.5,
+      "duration_q1": 73.8,
+      "duration_q3": 76.0,
+      "ratio_median": 0.1773,
+      "ratio_q1": 0.1722,
+      "ratio_q3": 0.1795,
+      "valid_nights": 8,
+      "window_days": 14
+    },
+    "range_position": {
+      "duration": "below_typical_range",
+      "ratio": "within_typical_range"
+    },
+    "personalized_interpretation": {
+      "text": "昨晚您的深睡时长略低于个人近期典型区间，深睡占比则处于典型区间内。这种时长偏低的情况目前更接近单晚波动。",
+      "evidence_refs": [
+        "grounding_facts.range_position",
+        "grounding_facts.persistence"
+      ]
+    },
+    "recommended_question": null,
+    "fixed_page_messages": [
+      "可穿戴设备的睡眠分期属于算法估算"
+    ]
+  },
+  "question_answer": null
+}

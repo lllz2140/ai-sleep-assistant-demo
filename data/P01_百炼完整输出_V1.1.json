@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "pipeline": {
+    "version": "SLEEP-END-TO-END-V1.1",
+    "mode": "aliyun",
+    "rule_version": "SLEEP-CONTROL-V2.2",
+    "selector_version": "QUESTION-SELECTOR-V1.0",
+    "knowledge_mode": "fixed_mapping_reviewed_knowledge"
+  },
+  "metric_card": {
+    "sleep_date": "2026-10-08",
+    "metric_id": "deep_sleep",
+    "current_value": {
+      "minutes": 74,
+      "ratio": 0.1762
+    },
+    "personal_baseline": {
+      "available": true,
+      "duration_median": 74.5,
+      "duration_q1": 73.8,
+      "duration_q3": 76.0,
+      "ratio_median": 0.1773,
+      "ratio_q1": 0.1722,
+      "ratio_q3": 0.1795,
+      "valid_nights": 8,
+      "window_days": 14
+    },
+    "range_position": {
+      "duration": "within_typical_range",
+      "ratio": "within_typical_range"
+    },
+    "personalized_interpretation": {
+      "text": "您的深睡时长与占比均处于个人近期典型区间内。相较于基线的轻微下降属于典型的单晚波动。",
+      "evidence_refs": [
+        "grounding_facts.range_position",
+        "grounding_facts.change",
+        "grounding_facts.persistence"
+      ]
+    },
+    "recommended_question": {
+      "question_id": "DS01",
+      "intent": "understand_optimal_amount",
+      "text": "深睡是不是越多越好？",
+      "context_source": "data_only"
+    },
+    "fixed_page_messages": [
+      "可穿戴设备的睡眠分期属于算法估算"
+    ]
+  },
+  "question_answer": {
+    "question_id": "DS01",
+    "text": "深睡并不是越多越好。现有资料不支持把某一个固定比例作为所有成年人的最优目标，因为深睡时长和占比会随年龄、个体及不同夜晚自然变化。整体睡眠不能由单一睡眠阶段定义，理解整体睡眠质量还需结合总睡眠时间、睡眠连续性、醒后的恢复感以及白天的状态。",
+    "evidence_refs": [],
+    "knowledge_refs": [
+      "K-DS-AMOUNT-01",
+      "K-SLEEP-QUALITY-01"
+    ]
+  }
+}

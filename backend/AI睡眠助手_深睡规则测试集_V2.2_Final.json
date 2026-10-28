@@ -1,0 +1,266 @@
+{
+  "suite_name": "AI睡眠助手深睡规则测试集",
+  "suite_version": "2.2-final",
+  "target_rule_version": "SLEEP-CONTROL-V2.2",
+  "note": "预期结果用于验证产品展示逻辑，不代表医学诊断标准。",
+  "fixtures": {
+    "stable_history_8": [
+      {"sleep_date": "2026-09-30", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 430, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1721},
+      {"sleep_date": "2026-10-01", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 76, "deep_sleep_ratio": 0.1810},
+      {"sleep_date": "2026-10-02", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 425, "deep_sleep_minutes": 73, "deep_sleep_ratio": 0.1718},
+      {"sleep_date": "2026-10-03", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 415, "deep_sleep_minutes": 75, "deep_sleep_ratio": 0.1807},
+      {"sleep_date": "2026-10-04", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 430, "deep_sleep_minutes": 77, "deep_sleep_ratio": 0.1791},
+      {"sleep_date": "2026-10-05", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 418, "deep_sleep_minutes": 72, "deep_sleep_ratio": 0.1722},
+      {"sleep_date": "2026-10-06", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 426, "deep_sleep_minutes": 76, "deep_sleep_ratio": 0.1784},
+      {"sleep_date": "2026-10-07", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1762}
+    ],
+    "stable_history_6": [
+      {"sleep_date": "2026-10-02", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 425, "deep_sleep_minutes": 73, "deep_sleep_ratio": 0.1718},
+      {"sleep_date": "2026-10-03", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 415, "deep_sleep_minutes": 75, "deep_sleep_ratio": 0.1807},
+      {"sleep_date": "2026-10-04", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 430, "deep_sleep_minutes": 77, "deep_sleep_ratio": 0.1791},
+      {"sleep_date": "2026-10-05", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 418, "deep_sleep_minutes": 72, "deep_sleep_ratio": 0.1722},
+      {"sleep_date": "2026-10-06", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 426, "deep_sleep_minutes": 76, "deep_sleep_ratio": 0.1784},
+      {"sleep_date": "2026-10-07", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1762}
+    ],
+    "six_recent_plus_two_old": [
+      {"sleep_date": "2026-09-20", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 75, "deep_sleep_ratio": 0.1786},
+      {"sleep_date": "2026-09-21", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 425, "deep_sleep_minutes": 76, "deep_sleep_ratio": 0.1788},
+      {"sleep_date": "2026-10-02", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 425, "deep_sleep_minutes": 73, "deep_sleep_ratio": 0.1718},
+      {"sleep_date": "2026-10-03", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 415, "deep_sleep_minutes": 75, "deep_sleep_ratio": 0.1807},
+      {"sleep_date": "2026-10-04", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 430, "deep_sleep_minutes": 77, "deep_sleep_ratio": 0.1791},
+      {"sleep_date": "2026-10-05", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 418, "deep_sleep_minutes": 72, "deep_sleep_ratio": 0.1722},
+      {"sleep_date": "2026-10-06", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 426, "deep_sleep_minutes": 76, "deep_sleep_ratio": 0.1784},
+      {"sleep_date": "2026-10-07", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1762}
+    ],
+    "repeated_drop_history_8": [
+      {"sleep_date": "2026-09-30", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 430, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1721},
+      {"sleep_date": "2026-10-01", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 76, "deep_sleep_ratio": 0.1810},
+      {"sleep_date": "2026-10-02", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 425, "deep_sleep_minutes": 78, "deep_sleep_ratio": 0.1835},
+      {"sleep_date": "2026-10-03", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 415, "deep_sleep_minutes": 75, "deep_sleep_ratio": 0.1807},
+      {"sleep_date": "2026-10-04", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 430, "deep_sleep_minutes": 77, "deep_sleep_ratio": 0.1791},
+      {"sleep_date": "2026-10-05", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 400, "deep_sleep_minutes": 48, "deep_sleep_ratio": 0.1200},
+      {"sleep_date": "2026-10-06", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 429, "deep_sleep_minutes": 73, "deep_sleep_ratio": 0.1702},
+      {"sleep_date": "2026-10-07", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 417, "deep_sleep_minutes": 50, "deep_sleep_ratio": 0.1199}
+    ]
+  },
+  "cases": [
+    {
+      "id": "DS-T01",
+      "name": "接近个人基线",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1762},
+      "subjective_feedback": {},
+      "expected": {
+        "data_quality.usable": true,
+        "metric_signal.change.level": "typical_variation",
+        "presentation.presentation_priority": "none",
+        "presentation.detail_card_available": true,
+        "presentation.highlight_on_homepage": false,
+        "metric_signal.range_position.duration": "within_typical_range",
+        "metric_signal.range_position.ratio": "within_typical_range",
+        "contract.contract_version": "2.2-final",
+        "llm_context.downstream_modules.recommended_question_selector.owner": "QUESTION-SELECTOR-V1.0",
+        "llm_context.downstream_modules.recommended_question_selector.model_generation_enabled": false
+      }
+    },
+    {
+      "id": "DS-T02",
+      "name": "个人基线不足7晚",
+      "history_fixture": "stable_history_6",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.personal_baseline.available": false,
+        "metric_signal.change.level": "not_evaluated",
+        "presentation.presentation_priority": "educational",
+        "presentation.detail_state": "baseline_building",
+        "presentation.show_personal_typical_range": false
+      }
+    },
+    {
+      "id": "DS-T03",
+      "name": "单晚明显低于个人基线",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.change.level": "notable",
+        "metric_signal.persistence.status": "single_or_occasional",
+        "presentation.presentation_priority": "secondary",
+        "presentation.highlight_on_homepage": true
+      }
+    },
+    {
+      "id": "DS-T04",
+      "name": "最近4晚中3晚出现相似变化",
+      "history_fixture": "repeated_drop_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.change.level": "notable",
+        "metric_signal.persistence.status": "repeated",
+        "metric_signal.persistence.matched_nights": 3,
+        "metric_signal.range_position.duration": "below_typical_range",
+        "metric_signal.range_position.ratio": "below_typical_range",
+        "presentation.presentation_priority": "primary",
+        "presentation.highlight_on_homepage": true,
+        "llm_context.downstream_modules.question_answer.knowledge_mode": "fixed_mapping_reviewed_knowledge",
+        "llm_context.downstream_modules.question_answer.use_model_general_knowledge": false
+      }
+    },
+    {
+      "id": "DS-T05",
+      "name": "时长下降但比例稳定",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 310, "deep_sleep_minutes": 55, "deep_sleep_ratio": 0.1774},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.change.level": "mild",
+        "presentation.presentation_priority": "none",
+        "presentation.highlight_on_homepage": false
+      }
+    },
+    {
+      "id": "DS-T06",
+      "name": "比例下降但时长稳定",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 600, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1233},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.change.level": "mild",
+        "presentation.presentation_priority": "none",
+        "presentation.highlight_on_homepage": false
+      }
+    },
+    {
+      "id": "DS-T07",
+      "name": "睡眠分期数据不完整",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "incomplete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {},
+      "expected": {
+        "data_quality.usable": false,
+        "data_quality.confidence": "unavailable",
+        "presentation.presentation_priority": "none",
+        "presentation.detail_card_available": false,
+        "presentation.detail_state": "data_unavailable"
+      }
+    },
+    {
+      "id": "DS-T08",
+      "name": "总睡眠时长为0",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 0, "deep_sleep_minutes": 0, "deep_sleep_ratio": 0},
+      "subjective_feedback": {},
+      "expected": {
+        "data_quality.usable": false,
+        "metric_signal.change.level": "not_evaluated",
+        "presentation.presentation_priority": "none"
+      }
+    },
+    {
+      "id": "DS-T09",
+      "name": "设备来源发生变化",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Oura Ring", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.personal_baseline.available": false,
+        "data_quality.valid_baseline_nights": 0,
+        "presentation.presentation_priority": "educational"
+      }
+    },
+    {
+      "id": "DS-T10",
+      "name": "持续变化但用户白天感觉正常",
+      "history_fixture": "repeated_drop_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {"daytime_sleepiness": "none", "functional_impact": "none", "safety_impact": false},
+      "expected": {
+        "subjective_context.available": true,
+        "subjective_context.needs_attention_from_subjective_feedback": false,
+        "presentation.presentation_priority": "primary",
+        "presentation.highlight_on_homepage": true
+      }
+    },
+    {
+      "id": "DS-T11",
+      "name": "用户报告严重日间功能影响",
+      "history_fixture": "repeated_drop_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {"daytime_sleepiness": "high", "functional_impact": "severe", "safety_impact": false},
+      "expected": {
+        "subjective_context.needs_attention_from_subjective_feedback": true,
+        "audit.matched_rule_ids__contains": "SUBJECTIVE-ATTENTION-001"
+      }
+    },
+    {
+      "id": "DS-T12",
+      "name": "用户报告安全影响",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1762},
+      "subjective_feedback": {"daytime_sleepiness": "high", "functional_impact": "moderate", "safety_impact": true},
+      "expected": {
+        "subjective_context.needs_attention_from_subjective_feedback": true,
+        "audit.matched_rule_ids__contains": "SUBJECTIVE-ATTENTION-001",
+        "llm_context.subjective_attention_message": "用户报告的日间功能或安全影响需要单独重视",
+        "llm_context.fixed_page_messages": ["可穿戴设备的睡眠分期属于算法估算"],
+        "llm_context.prohibited_claims__contains": "仅凭深睡指标判断整体睡眠质量或疾病"
+      }
+    },
+    {
+      "id": "DS-T13",
+      "name": "深睡高于个人基线",
+      "history_fixture": "stable_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 100, "deep_sleep_ratio": 0.2381},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.change.direction": "above_baseline",
+        "metric_signal.change.level": "typical_variation",
+        "presentation.presentation_priority": "none",
+        "presentation.highlight_on_homepage": false,
+        "metric_signal.range_position.duration": "above_typical_range",
+        "metric_signal.range_position.ratio": "above_typical_range"
+      }
+    },
+    {
+      "id": "DS-T14",
+      "name": "此前下降但昨晚恢复至个人水平",
+      "history_fixture": "repeated_drop_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 74, "deep_sleep_ratio": 0.1762},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.change.level": "typical_variation",
+        "metric_signal.persistence.status": "single_or_occasional",
+        "presentation.presentation_priority": "none",
+        "presentation.highlight_on_homepage": false
+      }
+    },
+    {
+      "id": "DS-T15",
+      "name": "相同输入重复运行结果一致",
+      "history_fixture": "repeated_drop_history_8",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {},
+      "repeat_runs": 3,
+      "expected": {
+        "metric_signal.change.level": "notable",
+        "metric_signal.persistence.status": "repeated",
+        "presentation.presentation_priority": "primary"
+      }
+    },
+    {
+      "id": "DS-T16",
+      "name": "近14天不足7晚时不使用更早记录补足",
+      "history_fixture": "six_recent_plus_two_old",
+      "current_night": {"sleep_date": "2026-10-08", "source_id": "Apple Watch", "record_valid": true, "stage_data_status": "complete", "total_sleep_minutes": 420, "deep_sleep_minutes": 45, "deep_sleep_ratio": 0.1071},
+      "subjective_feedback": {},
+      "expected": {
+        "metric_signal.personal_baseline.available": false,
+        "metric_signal.personal_baseline.valid_nights": 6,
+        "metric_signal.personal_baseline.window_days": 14,
+        "presentation.detail_state": "baseline_building"
+      }
+    }
+  ]
+}
